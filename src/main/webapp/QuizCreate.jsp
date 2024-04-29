@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,8 +48,9 @@
 	</div>
 	
 	<div class="container">
-		<h3 class="text-center text-black ms-5">QUIZ INFO</h3><br>
-			<form action="QuestionsAdd.jsp" method="post">
+		<h3 class="text-center text-black ms-5">CREATE QUIZ</h3><br>
+		
+			<form action="CreatedQuizInfoInSession" method="get">
 			<div class="d-flex flex-column row-gap-4 ">
 			
 				<div class="row col-md-10 " >
@@ -60,7 +62,7 @@
 					<input class="w-25 " style="outline-color:gray;outline-style:solid" type="number" name="quizNumber"/>
 				</div>			 
 				<div class="row col-md-10">
-					<h5 class="col-md-3 mx-auto" >QUIZ CATEGORY</h5>
+					<h5 class="col-md-3 mx-auto">QUIZ CATEGORY</h5>
 					<input class=" w-25 " style="outline-color:gray;outline-style:solid" type="text" name="quizCategory"/>
 				</div>	
 				<div class="row col-md-10">
@@ -73,11 +75,12 @@
 				</div>
 						
 			</div><br/>
+			
 			<div class="text-center ">
 				<button type="submit" class="btn btn-warning col-md-2">ADD QUESTIONS</button>
 			</div>
 			</form>	
-			
+		
 	</div>
 	
 		<footer class="p-3 bg-dark text-light mb-0" style="position:fixed;bottom:0;width:100%;">

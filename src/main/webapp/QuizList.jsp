@@ -47,7 +47,7 @@
 	</div>
 	
 	<div class="container">
-	<form action="QuizInfo.jsp">
+	<form action="QuizCreate.jsp">
 		<div class="row"> 
 			<h3 class=" text-black col-md-9 text-center ms-5 ps-5">LIST OF QUIZ</h3>
 			
