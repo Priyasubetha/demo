@@ -50,26 +50,26 @@
 	<div class="container">
 		<h3 class="text-center text-black ms-5">CREATE QUIZ</h3><br>
 		
-			<form action="CreatedQuizInfoInSession" method="get">
+			<form action="CreatedQuizInfoInSession" method="get" class="form-horizontal">
 			<div class="d-flex flex-column row-gap-4 ">
 			
-				<div class="row col-md-10 " >
+				<div class="col-md-10 form-group" >
 					<h5 class="col-md-3 mx-auto">QUIZ NAME</h5>
 					<input class=" w-25" style="outline-color:gray;outline-style:solid" type="text" name="quizName"/>
 				</div>
-				<div class="row col-md-10">
+				<div class="row col-md-10 form-group">
 					<h5 class="col-md-3 mx-auto">QUIZ NUMBER</h5>
 					<input class="w-25 " style="outline-color:gray;outline-style:solid" type="number" name="quizNumber"/>
 				</div>			 
-				<div class="row col-md-10">
+				<div class="row col-md-10 form-group">
 					<h5 class="col-md-3 mx-auto">QUIZ CATEGORY</h5>
 					<input class=" w-25 " style="outline-color:gray;outline-style:solid" type="text" name="quizCategory"/>
 				</div>	
-				<div class="row col-md-10">
+				<div class="row col-md-10 form-group">
 					<h5 class="col-md-3 mx-auto">NO.OF QUESTIONS</h5>
 					<input class=" w-25 " style="outline-color:gray;outline-style:solid" type="number" name="numberOfQuestions"/>
 				</div>
-				<div class="row col-md-10 ">
+				<div class="row col-md-10 form-group">
 					<h5 class="col-md-3 mx-auto">TIME LIMIT</h5>
 					<input class=" w-25 " style="outline-color:gray;outline-style:solid" type="time" name="quizTestTimeLimit"/>
 				</div>

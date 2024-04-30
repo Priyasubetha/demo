@@ -45,39 +45,29 @@
 		<p class="col"> </p> <p class="col"> </p>
 		<img alt="pointels"	 src="Pointel.png" style="width: 100px; height: 80px;" class="col">
 	</div>
-	<%
-	String totalQuestions = (String)session.getAttribute("numberOfQuestionsSession");
-	
-	if(totalQuestions!=null)
-		if(totalQuestions.matches("\\d+")){
-			int num = Integer.parseInt(totalQuestions);
-
-			// recursive process
-	
-			for(int i=1;i<=num;i++){
 		
-	%><!-- Start iteration -->
-			
-	<form action="QuestionAnswerSession" method="post">
+	<form action="QuizList.jsp" method="get">
 	<div class="container ">
 		
 		<h3 class=" text-black text-center ms-5">ADD QUESTIONS</h3>
 		<br>
 		<div class="row">
-		<h5 class="text-white col-md-2"><% out.print(i); %> .</h5>
+		<h5 class="text-white col-md-2"><% 
+			String i =(String)request.getAttribute("questionNumber");
+			out.print(i); %> .</h5>
 		<textarea rows="4" cols="100" placeholder="enter question here..." name="questions[]" class="ms-5 col-md-11" style="outline-color:gray;outline-style:solid"></textarea>
 		</div><br>
 		
 		<div class="row col-md-11 ms-5">
-			<input class="col-md-1" type="radio" name="option" value="option1"/> <input type="text" name="optionValue" value="answer1" class="col-md-2" placeholder="enter option1"/>
-			<input class="col-md-1" type="radio" name="option" value="option2"/> <input type="text" name="optionValue" value="answer2" class="col-md-2" placeholder="enter option2"/>
-			<input class="col-md-1" type="radio" name="option" value="option3"/> <input type="text" name="optionValue" value="answer3" class="col-md-2" placeholder="enter option3"/>
-			<input class="col-md-1" type="radio" name="option" value="option4"/><input type="text" name="optionValue" value="answer4" class="col-md-2" placeholder="enter option4"/>
+			<input class="col-md-1" type="radio" name="option" value="option1"/> <input type="text" name="optionValue"  class="col-md-2" placeholder="enter option1"/>
+			<input class="col-md-1" type="radio" name="option" value="option2"/> <input type="text" name="optionValue" class="col-md-2" placeholder="enter option2"/>
+			<input class="col-md-1" type="radio" name="option" value="option3"/> <input type="text" name="optionValue" class="col-md-2" placeholder="enter option3"/>
+			<input class="col-md-1" type="radio" name="option" value="option4"/><input type="text" name="optionValue" class="col-md-2" placeholder="enter option4"/>
 		</div><br><br>
 		
 		<div class="btn-group " style="margin-left:880px;" role="group">
-			<button type="button" class="btn btn-dark" value="previousBtn" name="previousButton" >&lt--Previous</button>
-			<button type="button" class="btn btn-dark me-4" value="nextBtn" name="nextButton">Next--&gt</button>
+			<button type="submit" class="btn btn-dark" value="previousBtn" name="previousButton" id="btnPrevious" formaction="QuestionAnswerSession" formmethod="get" >&lt--Previous</button>
+			<button type="submit" class="btn btn-dark me-4" value="nextBtn" name="nextButton" id="btnNext" formaction="QuestionAnswerSession" formmethod="get" >Next--&gt</button>
 		</div><br><br>
 		<div class="text-center " id="quiz-submit-button">
 			<button type="submit" class="btn btn-warning px-4 " >SUBMIT</button>
@@ -85,25 +75,7 @@
 	</div>
 	</form>	
 			
-			
-			
-			
-			
-			
-			
-			
-	<!-- End iteration -->
-	<%		
-			}
-			
-					
-		}
-	%>
-
-	
-	
-	
-	
+		
 		<footer class="p-3 bg-dark text-light mb-0" style="position:fixed;bottom:0;width:100%;">
 		<div class="row">
 			<div class="col-md-4">© Pointel Solutions - 2024. All rights reserved.</div>

@@ -1,5 +1,4 @@
 package servlet;
- 
 
 import java.io.*;
 import javax.servlet.*;
@@ -26,11 +25,19 @@ public class CreatedQuizInfoInSession extends HttpServlet {
 		
 		quizTestTimeLimit = request.getParameter("quizTestTimeLimit");
 		session.setAttribute("quizTestTimeLimitSession", quizTestTimeLimit);
-		String sess=(String) session.getAttribute("quizNameSession");
-		System.out.print(sess);
-		RequestDispatcher dispatch= request.getRequestDispatcher("QuestionsAdd.jsp");
+		PrintWriter out=response.getWriter();
+////		String n=(String)session.getAttribute("numberOfQuestionsSession");
+////		System.out.println(n+"  hii" + session.getAttribute("numberOfQuestionsSession"));
+////		out.print(n+" "+(String)session.getAttribute("numberOfQuestionsSession"));
+		out.println("im ist page");
+//		out.flush();
+		RequestDispatcher dispatch= request.getRequestDispatcher("/QuestionAnswerSession");
 		dispatch.forward(request,response);
 		
 	}
-
+//	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//		PrintWriter out=response.getWriter();
+//		out.println("eee");
+//		out.flush();
+//	}
 }
