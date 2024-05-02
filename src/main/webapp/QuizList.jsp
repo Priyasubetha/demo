@@ -49,7 +49,7 @@
 	<div class="container">
 	<form action="QuizCreate.jsp">
 		<div class="row"> 
-			<h3 class=" text-black col-md-9 text-center ms-5 ps-5">LIST OF QUIZ</h3>
+			<h3 class=" text-black col-md-9 text-center ps-5" style="margin-left:150px">LIST OF QUIZ</h3>
 			
 			<button type="submit" class="btn btn-warning col-md-2 ms-2">ADD NEW</button>
 			

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,39 +47,40 @@
 		<img alt="pointels"	 src="Pointel.png" style="width: 100px; height: 80px;" class="col">
 	</div>
 	
-	<div class="container">
-		<h3 class="text-center text-black ms-5">CREATE QUIZ</h3><br>
+	<div class="container-md w-55 me-5">
+		<h3 class="text-center text-black " style="margin-right:80px;">CREATE QUIZ</h3><br>
+		<form action="CreatedQuizInfoInSession" method="get" class="form-horizontal" style="margin-left:100px;">
 		
-			<form action="CreatedQuizInfoInSession" method="get" class="form-horizontal">
-			<div class="d-flex flex-column row-gap-4 ">
+			<div class="d-flex flex-column row-gap-4 align-items-center ms-5 col-md-8 bg-dark border rounded-3 border-primary p-5" >
 			
-				<div class="col-md-10 form-group" >
-					<h5 class="col-md-3 mx-auto">QUIZ NAME</h5>
-					<input class=" w-25" style="outline-color:gray;outline-style:solid" type="text" name="quizName"/>
-				</div>
-				<div class="row col-md-10 form-group">
-					<h5 class="col-md-3 mx-auto">QUIZ NUMBER</h5>
-					<input class="w-25 " style="outline-color:gray;outline-style:solid" type="number" name="quizNumber"/>
-				</div>			 
-				<div class="row col-md-10 form-group">
-					<h5 class="col-md-3 mx-auto">QUIZ CATEGORY</h5>
-					<input class=" w-25 " style="outline-color:gray;outline-style:solid" type="text" name="quizCategory"/>
-				</div>	
-				<div class="row col-md-10 form-group">
-					<h5 class="col-md-3 mx-auto">NO.OF QUESTIONS</h5>
-					<input class=" w-25 " style="outline-color:gray;outline-style:solid" type="number" name="numberOfQuestions"/>
-				</div>
-				<div class="row col-md-10 form-group">
-					<h5 class="col-md-3 mx-auto">TIME LIMIT</h5>
-					<input class=" w-25 " style="outline-color:gray;outline-style:solid" type="time" name="quizTestTimeLimit"/>
-				</div>
-						
+				<div class="form-group row col-md-12 ">
+     			 <label class="control-label text-center col-md-6 me-0 text-white" for="quizname">Quiz Name</label>
+   			     <input required class="form-control border border-info col-md-6" style="width:270px;height:30px" type="text" name="quizName" id="quizname"/>
+  			  </div>
+  			   <div class="form-group row col-md-12">
+     			 <label class="control-label text-center col-md-6 me-0 text-white" for="quiznumber">Quiz Number</label>
+   			     <input required class="form-control col-md-6 border-info" style="width:270px;height:30px" type="number" name="quizNumber" id="quiznumber"/>
+  			  </div>
+  			   <div class="form-group row col-md-12">
+     			 <label class="control-label text-center col-md-6 me-0 text-white" for="quizcategory">Quiz Category</label>
+   			     <input required class="form-control col-md-6 border-info" style="width:270px;height:30px" type="text" name="quizCategory" id="quizcategory"/>
+  			  </div>
+  			  <div class="form-group row col-md-12">
+     			 <label class="control-label text-center col-md-6 me-0 text-white" for="numberofquestions">No.of Questions</label>
+   			     <input required class=" form-control col-md-6 border-info" style="width:270px;height:30px" type="number" name="numberOfQuestions" id="numberofquestions"/>
+  			  </div>
+  			  <div class="form-group row col-md-12">
+     			 <label class="control-label text-center col-md-6 me-0 text-white" for="quiztesttimelimit">Time Limit</label>
+   			     <input required class=" form-control col-md-6 border-info" style="width:270px;height:30px" type="time" name="quizTestTimeLimit" id="quiztesttimelimit"/>
+  			  </div>			
 			</div><br/>
 			
 			<div class="text-center ">
-				<button type="submit" class="btn btn-warning col-md-2">ADD QUESTIONS</button>
+				<button type="submit" class="btn btn-warning col-md-2 hover-overlay" style="margin-right:180px;">ADD QUESTIONS</button>
 			</div>
 			</form>	
+
+			
 		
 	</div>
 	

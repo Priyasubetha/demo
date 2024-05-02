@@ -9,9 +9,11 @@ public class CreatedQuizInfoInSession extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		
 		HttpSession session=request.getSession();
 		String quizNumber,quizCategory,numberOfQuestions,quizTestTimeLimit,quizName;
 		quizName = request.getParameter("quizName");
+		
 		session.setAttribute("quizNameSession", quizName);
 		
 		quizNumber = request.getParameter("quizNumber");
@@ -25,19 +27,12 @@ public class CreatedQuizInfoInSession extends HttpServlet {
 		
 		quizTestTimeLimit = request.getParameter("quizTestTimeLimit");
 		session.setAttribute("quizTestTimeLimitSession", quizTestTimeLimit);
-		PrintWriter out=response.getWriter();
-////		String n=(String)session.getAttribute("numberOfQuestionsSession");
-////		System.out.println(n+"  hii" + session.getAttribute("numberOfQuestionsSession"));
-////		out.print(n+" "+(String)session.getAttribute("numberOfQuestionsSession"));
-		out.println("im ist page");
-//		out.flush();
+
 		RequestDispatcher dispatch= request.getRequestDispatcher("/QuestionAnswerSession");
-		dispatch.forward(request,response);
+		dispatch.include(request,response);
+
 		
 	}
 //	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		PrintWriter out=response.getWriter();
-//		out.println("eee");
-//		out.flush();
 //	}
 }

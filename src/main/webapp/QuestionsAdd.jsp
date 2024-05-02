@@ -9,6 +9,11 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link rel="stylesheet" href="stylesheet.css">
 <script src="script.js"></script>
+<style>
+         input[type=radio] {
+            accent-color: green;
+         }
+      </style>
 </head>
 
 <body class="bg-secondary">
@@ -53,21 +58,22 @@
 		<br>
 		<div class="row">
 		<h5 class="text-white col-md-2"><% 
-			String i =(String)request.getAttribute("questionNumber");
-			out.print(i); %> .</h5>
-		<textarea rows="4" cols="100" placeholder="enter question here..." name="questions[]" class="ms-5 col-md-11" style="outline-color:gray;outline-style:solid"></textarea>
+		String num=(String)session.getAttribute("numberOfQuestionsSession");
+			//String i =(String)request.getAttribute("questionNumber");
+			out.print(num); %> .</h5>
+		<textarea rows="4" cols="100" placeholder="enter question here..." name="questions[]" class="ms-5 col-md-11 border border-info" style="border-width:1px;outline-style:solid"></textarea>
 		</div><br>
 		
 		<div class="row col-md-11 ms-5">
-			<input class="col-md-1" type="radio" name="option" value="option1"/> <input type="text" name="optionValue"  class="col-md-2" placeholder="enter option1"/>
-			<input class="col-md-1" type="radio" name="option" value="option2"/> <input type="text" name="optionValue" class="col-md-2" placeholder="enter option2"/>
-			<input class="col-md-1" type="radio" name="option" value="option3"/> <input type="text" name="optionValue" class="col-md-2" placeholder="enter option3"/>
-			<input class="col-md-1" type="radio" name="option" value="option4"/><input type="text" name="optionValue" class="col-md-2" placeholder="enter option4"/>
+			<input class="col-md-1" type="radio" name="option" value="option1"/> <input type="text" style="outline-style:none" name="optionValue"  class="col-md-2" placeholder="enter option1"/>
+			<input class="col-md-1" type="radio" name="option" value="option2"/> <input type="text" style="outline-style:none" name="optionValue" class="col-md-2" placeholder="enter option2"/>
+			<input class="col-md-1" type="radio" name="option" value="option3"/> <input type="text" style="outline-style:none" name="optionValue" class="col-md-2" placeholder="enter option3"/>
+			<input class="col-md-1" type="radio" name="option" value="option4"/><input type="text" style="outline-style:none" name="optionValue" class="col-md-2" placeholder="enter option4"/>
 		</div><br><br>
 		
 		<div class="btn-group " style="margin-left:880px;" role="group">
-			<button type="submit" class="btn btn-dark" value="previousBtn" name="previousButton" id="btnPrevious" formaction="QuestionAnswerSession" formmethod="get" >&lt--Previous</button>
-			<button type="submit" class="btn btn-dark me-4" value="nextBtn" name="nextButton" id="btnNext" formaction="QuestionAnswerSession" formmethod="get" >Next--&gt</button>
+			<button type="submit" class="btn btn-dark" value="previousBtn" name="previousButton" id="btnPrevious" formaction="QuestionsAdd.jsp" formmethod="get" >&lt--Previous</button>
+			<button type="submit" class="btn btn-dark me-4" value="nextBtn" name="nextButton" id="btnNext" formaction="QuestionsAdd.jsp" formmethod="get" >Next--&gt</button>
 		</div><br><br>
 		<div class="text-center " id="quiz-submit-button">
 			<button type="submit" class="btn btn-warning px-4 " >SUBMIT</button>

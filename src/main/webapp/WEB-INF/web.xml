@@ -10,23 +10,13 @@
     <servlet-name>CreatedQuizInfoInSession</servlet-name>
     <url-pattern>/CreatedQuizInfoInSession</url-pattern>
   </servlet-mapping>
-   <servlet>
-    <description></description>
-    <display-name>QuestionAnswerSession</display-name>
-    <servlet-name>QuestionAnswerSession</servlet-name>
-    <servlet-class>servlet.QuestionAnswerSession</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>QuestionAnswerSession</servlet-name>
-    <url-pattern>/QuestionAnswerPageDirect</url-pattern>
-  </servlet-mapping>   
-  
+
   <servlet>
-  	<servlet-name>QuestionAnswerServlet</servlet-name>
+  	<servlet-name>QuestionAnswerSession</servlet-name>
   	<servlet-class>servlet.QuestionAnswerSession</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>QuestionAnswerServlet</servlet-name>
+  	<servlet-name>QuestionAnswerSession</servlet-name>
   	<url-pattern>/QuestionAnswerSession</url-pattern>
   </servlet-mapping>
 </web-app>

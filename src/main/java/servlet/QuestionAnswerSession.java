@@ -9,7 +9,6 @@ import javax.servlet.http.*;
 public class QuestionAnswerSession extends HttpServlet {
 	
 
-	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		int totalNumberOfQuestions,i=1;		// i - represents iteration of total number of questions. 
